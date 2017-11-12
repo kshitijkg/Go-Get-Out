@@ -31,14 +31,14 @@ public class Base extends AppCompatActivity {
         // button = (Button) findViewById(R.id.logout);
         mAuth = FirebaseAuth.getInstance();
 
-        /*mAuthListener = new FirebaseAuth.AuthStateListener() {
+        mAuthListener = new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 if(firebaseAuth.getCurrentUser()==null){
                     startActivity(new Intent(Base.this,MainActivity.class));
                 }
             }
-        };*/
+        };
 
     }
 

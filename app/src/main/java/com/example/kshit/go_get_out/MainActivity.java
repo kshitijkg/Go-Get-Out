@@ -59,17 +59,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 if(firebaseAuth.getCurrentUser()!=null){
-                    //startActivity(new Intent(MainActivity.this, MainActivity.class));
-                    /*try {
-                        Log.d(TAG, "ID: " + mAuth.getCurrentUser().getUid());
-                    } catch (Exception e) {
-                        Log.d(TAG, "Whoops");
-                    }
-                    try {
-                        Log.d(TAG, "Email: " + mAuth.getCurrentUser().getEmail());
-                    } catch (Exception e) {
-                        Log.d(TAG, "Whoops");
-                    }*/
+                    // This class will be the one from the activity that the user is
+                    // redirected to if the user signs in
+                    startActivity(new Intent(MainActivity.this, SignIn.class));
                 }
             }
         };

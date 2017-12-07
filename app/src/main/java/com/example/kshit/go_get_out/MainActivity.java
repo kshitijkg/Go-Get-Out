@@ -1,6 +1,7 @@
 package com.example.kshit.go_get_out;
 
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -23,6 +24,11 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -33,6 +39,9 @@ public class MainActivity extends AppCompatActivity {
     FirebaseAuth.AuthStateListener mAuthListener;
 
     GoogleApiClient mGoogleApiClient;
+    FirebaseDatabase database = FirebaseDatabase.getInstance();
+    DatabaseReference myRef = database.getReference();
+
 
     @Override
     public void onStart() {
@@ -61,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
                 if(firebaseAuth.getCurrentUser()!=null){
                     // This class will be the one from the activity that the user is
                     // redirected to if the user signs in
-                    startActivity(new Intent(MainActivity.this, SignIn.class));
+                    startActivity(new Intent(MainActivity.this, TestActivity.class));
                 }
             }
         };
@@ -117,6 +126,46 @@ public class MainActivity extends AppCompatActivity {
                             // Sign in success, update UI with the signed-in user's information
                             Log.d("TAG", "signInWithCredential:success");
                             FirebaseUser user = mAuth.getCurrentUser();
+                            final DatabaseReference newRef = myRef.child("Users").push();
+                            newRef.child("Name").setValue(user.getDisplayName());
+                            final DatabaseReference ExerciseRef = newRef.child("Exercises");
+                            final DatabaseReference CurRef = ExerciseRef.child("Current");
+                            final DatabaseReference PreRef = ExerciseRef.child("Previous");
+                            CurRef.child("Name").setValue("A");
+                            CurRef.child("Start Point").setValue("B");
+                            CurRef.child("End Point").setValue("B");
+                            CurRef.child("Distance").setValue(5);
+                            CurRef.child("Start Time").setValue(3);
+                            CurRef.child("End Time").setValue(null);
+                            DatabaseReference newPreRef1 = ExerciseRef.child("Previous").child("Date2");
+                            newPreRef1.child("Name").setValue("");
+                            newPreRef1.child("Start Point").setValue("");
+                            newPreRef1.child("End Point").setValue("");
+                            newPreRef1.child("Speed").setValue("");
+                            newPreRef1.child("Distance").setValue("");
+                            newPreRef1.child("Time").setValue("");
+                            newRef.addListenerForSingleValueEvent(new ValueEventListener() {
+                                @Override
+                                public void onDataChange(DataSnapshot dataSnapshot) {
+                                    if ((dataSnapshot.child("Exercises").child("Current").child("End Time").getValue().toString())!=null){
+                                        DatabaseReference newPreRef = ExerciseRef.child("Previous").child("Date");
+                                        DataSnapshot currRef = dataSnapshot.child("Exercises").child("Current");
+                                        newPreRef.child("Name").setValue(currRef.child("Name").getValue().toString());
+                                        newPreRef.child("Start Point").setValue(currRef.child("Start Point").getValue());
+                                        newPreRef.child("End Point").setValue(currRef.child("End Point").getValue());
+                                        newPreRef.child("Speed").setValue("");
+                                        newPreRef.child("Distance").setValue("");
+                                        newPreRef.child("Time").setValue("");
+                                        dataSnapshot.child("Exercises").child("Current").getRef().removeValue();
+                                    }
+
+                                }
+                                @Override
+                                public void onCancelled(DatabaseError databaseError) {
+
+                                }
+                            });
+
                             //updateUI(user);
                         } else {
                             // If sign in fails, display a message to the user.

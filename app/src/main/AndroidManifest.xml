@@ -21,6 +21,7 @@
             android:name=".FinishActivity"
             android:label="@string/title_activity_finish"
             android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".Base"></activity>
     </application>
 
 </manifest>

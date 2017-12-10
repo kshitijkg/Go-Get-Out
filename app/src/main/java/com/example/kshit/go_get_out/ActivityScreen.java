@@ -17,6 +17,6 @@ public class ActivityScreen extends AppCompatActivity {
         setContentView(R.layout.activity_screen);
         String[] ListofStrings = {"String1","String2","String3","String4"};
         ListView history = (ListView) findViewById(R.id.List1);
-        ListAdapter historyAdapter  new ArrayAdapter<String>(this, R.id.List1, ListofStrings )
+        ListAdapter historyAdapter = new ArrayAdapter<String>(this, R.id.List1, ListofStrings );
     }
 }

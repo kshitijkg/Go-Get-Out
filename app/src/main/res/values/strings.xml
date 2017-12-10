@@ -1,15 +1,4 @@
 <resources>
     <string name="app_name">Go-Get-Out</string>
-<<<<<<< HEAD
-<<<<<<< HEAD
     <string name="title_activity_finish">FinishActivity</string>
-=======
-    <string name="title_activity_second_screen">SecondScreen</string>
-    <string name="title_activity_seconf">SeconfActivity</string>
->>>>>>> upstream/master
-=======
-    <string name="title_activity_finish">FinishActivity</string>
-    <string name="title_activity_second_screen">SecondScreen</string>
-    <string name="title_activity_seconf">SeconfActivity</string>
->>>>>>> 0c31d521ec24c78ba5947deca73fdab602c3114d
 </resources>

@@ -136,7 +136,7 @@ public class MainActivity extends AppCompatActivity {
                             CurRef.child("End Point").setValue("B");
                             CurRef.child("Distance").setValue(5);
                             CurRef.child("Start Time").setValue(3);
-                            CurRef.child("End Time").setValue(null);
+                            CurRef.child("End Time").setValue(5);
                             DatabaseReference newPreRef1 = ExerciseRef.child("Previous").child("Date2");
                             newPreRef1.child("Name").setValue("");
                             newPreRef1.child("Start Point").setValue("");
@@ -178,4 +178,3 @@ public class MainActivity extends AppCompatActivity {
                 });
     }
 }
-

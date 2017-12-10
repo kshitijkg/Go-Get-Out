@@ -29,5 +29,6 @@ public class ActivityScreen extends AppCompatActivity {
                 startActivityForResult(myIntent, 0);
             }
         });
+        ListAdapter historyAdapter = new ArrayAdapter<String>(this, R.id.List1, ListofStrings );
     }
 }

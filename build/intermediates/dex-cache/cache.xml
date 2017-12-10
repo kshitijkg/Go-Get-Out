@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/Users/satwik/.android/build-cache/ced7bd37a97458d46c039c3edd78f0c1cf4bcc9d/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="9935891f23923f39d002087085d9696568a9f657">
+        <dex dex="/Users/satwik/Docs2/Go-Get-Out/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_0cf4737a94e9c5351a01cd96129c45756a4fce9d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/satwik/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/26.0.0-alpha1/support-annotations-26.0.0-alpha1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="023ee503b631f69511e335a061ea008f8da60f40">
+        <dex dex="/Users/satwik/Docs2/Go-Get-Out/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-26.0.0-alpha1_408b8e8d98c7df71d55e146c403a72443f34da8d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/satwik/Docs2/Go-Get-Out/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="a0d7a5d4215fb1a203d8643fd767b5da81a6a34b">
+        <dex dex="/Users/satwik/Docs2/Go-Get-Out/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_ffea45f5e4cb15ae9f6be8cdc25f25fea2adbf6f/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/satwik/.android/build-cache/f0a7b7244e19575342029eb590d7cf275acee156/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/Users/satwik/Docs2/Go-Get-Out/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_86edd431714ccf49812a6d8c86a193adfcc8be24/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/satwik/.android/build-cache/b73b8da761c2e66be6414ab57bacdfd75e116772/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="8df0e365e40beb151bc42dee20817721a6cab7b0">
+        <dex dex="/Users/satwik/Docs2/Go-Get-Out/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_7a05b603b6a204f59c55da2556ba26235aeb5280/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/satwik/.android/build-cache/a65895e1f9a06644cb30dccaf3f5e1d560149d0c/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="cddcd0fb93bc70e27325f2f715b2710332004ebb">
+        <dex dex="/Users/satwik/Docs2/Go-Get-Out/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_5e60bc599f1c16b35a008648760eeacf42663c4e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/satwik/.android/build-cache/3f58fb459bd58dff25ee8d51eb0d0ef6e1694613/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="2e92aa0163544a804a0b34f169ca61801770839a">
+        <dex dex="/Users/satwik/Docs2/Go-Get-Out/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_5c5b6183b591f7102e0767d215aadc1db2085049/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/satwik/.android/build-cache/2a93e9ca3cb0572131f763f9e989078342d24cc1/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="47471eb19df288158b00b8d9cfa41bce7373f5cc">
+        <dex dex="/Users/satwik/Docs2/Go-Get-Out/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_b0baa08adb8b133c551c880c6972b6dffaf92dd1/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/satwik/.android/build-cache/e0b29bacf1e47f2345cff67968fee7f1390e2502/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="c4f45092eee6cdf1a5dbd597b2b6819be652ce2e">
+        <dex dex="/Users/satwik/Docs2/Go-Get-Out/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_6897cac18de87e8dacc1f823c58f8149ca78f27d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/satwik/.android/build-cache/25952180317769787c22cf3093abd13061a870e9/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="88246166d5afb106f532f6e6deae683c66b42c89">
+        <dex dex="/Users/satwik/Docs2/Go-Get-Out/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_66cb32c5424d0bcf152ca8d3d8745858ce77486a/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/satwik/.android/build-cache/48a36b75bed49d97fe97c4390a7dcda58bef418d/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
+        <dex dex="/Users/satwik/Docs2/Go-Get-Out/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_0533369793f1a292b00050fca618cce71c7ad14d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/satwik/Library/Android/sdk/extras/m2repository/com/android/support/constraint/constraint-layout-solver/1.0.2/constraint-layout-solver-1.0.2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="b9cd8fc6bd15cb915735d34535db30ece0c44603">
+        <dex dex="/Users/satwik/Docs2/Go-Get-Out/app/build/intermediates/transforms/dex/debug/folders/1000/10/constraint-layout-solver-1.0.2_73ab8493e3fac66d01dfafc70c0d3f8e2e7a8f1b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/satwik/.android/build-cache/9272cb20569ef39f3ef2cfcbb25c5e124232846f/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="fcd01fd11233459f546c437ec927e9b61bf7caf1">
+        <dex dex="/Users/satwik/Docs2/Go-Get-Out/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_11a19e4fade81804580a9bde3e125556e2498cd7/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/satwik/Docs2/Go-Get-Out/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
+        <dex dex="/Users/satwik/Docs2/Go-Get-Out/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_f1b4d48a0cc1b286666313b926c7ae0a430d878b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/satwik/.android/build-cache/1f15463b3be3ab5e09d20e97b9b2a2d2b88e5230/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="952944218ecedea1554a513dec0c14d570642843">
+        <dex dex="/Users/satwik/Docs2/Go-Get-Out/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_636a472a703729f4e7aafb4c851126e4497ef53a/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/satwik/.android/build-cache/1ead53b47278f354c3ee3e9e76b510cd39eea7b2/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="18d31838aa4fcc768a8a0516e22cc13b94655d89">
+        <dex dex="/Users/satwik/Docs2/Go-Get-Out/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_6af24650007006af343143ea211b36f46edd3774/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/satwik/.android/build-cache/daa02497b9fb7e5aa0dcb23373af10d9a587ffd3/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="6a022bf00ccd0948a8180c505e8e458bbddd43a6">
+        <dex dex="/Users/satwik/Docs2/Go-Get-Out/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_371240af92f478d4baa36167a3015b1d02b2ecf8/classes.dex" />
+    </item>
+
+</items>

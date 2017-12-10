@@ -16,22 +16,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0c31d521ec24c78ba5947deca73fdab602c3114d
         <activity android:name=".ActivityScreen" />
         <activity
             android:name=".FinishActivity"
             android:label="@string/title_activity_finish"
             android:theme="@style/AppTheme.NoActionBar"></activity>
-<<<<<<< HEAD
-=======
-        <activity android:name=".Base"></activity>
->>>>>>> upstream/master
-=======
-        <activity android:name=".Base"></activity>
->>>>>>> 0c31d521ec24c78ba5947deca73fdab602c3114d
     </application>
 
 </manifest>

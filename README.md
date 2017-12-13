@@ -1,9 +1,9 @@
 # Go-Get-Out
 Member:
-Satwik Singh
-Qingyu Wang
-Kshitij Gupta
-Xinhang Chen
+Satwik Singh,
+Qingyu Wang,
+Kshitij Gupta,
+Xinhang Chen,
 Zixiong Feng
 PM: Koushhik Kumar
 

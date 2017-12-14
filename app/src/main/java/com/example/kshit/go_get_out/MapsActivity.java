@@ -8,10 +8,13 @@ import android.location.Location;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.content.ContextCompat;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.google.android.gms.common.ConnectionResult;
@@ -45,15 +48,16 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         LocationListener {
 
     private GoogleMap mMap;
-    ArrayList<LatLng> MarkerPoints;
-    GoogleApiClient mGoogleApiClient;
-    LocationRequest mLocationRequest;
-    LatLng start = null;
+    private ArrayList<LatLng> MarkerPoints;
+    private GoogleApiClient mGoogleApiClient;
+    private LocationRequest mLocationRequest;
+    private LatLng start = null;
 
-    double displacement1 = 200;
-    double distance;
-    double lat;
-    double lng;
+    private double displacement1 = 100;
+
+    public static float distance;
+    public static Long difference;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,6 +75,15 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
 
+        Button next = (Button)findViewById(R.id.button);
+        next.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                difference = (SystemClock.elapsedRealtime() - ActivityScreen.start) / 1000;
+                Intent myIntent = new Intent(view.getContext(), FinishActivity.class);
+                startActivityForResult(myIntent, 0);
+            }
+        });
     }
 
 
@@ -110,8 +123,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         double latitude = location.getLatitude();
         double longitude = location.getLongitude();
         LatLng latLng = new LatLng(latitude, longitude);
-        LatLng des = new LatLng(0.0,0.0);
-
+        LatLng des;
 
         if (start == null){
             //add the start point to the MarkerPoints
@@ -119,21 +131,27 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
             //get a random destination point
             start = latLng;
-            lat = latitude;
-            lng = longitude;
+            double lat = latitude;
+            double lng = longitude;
             double displacement2 = displacement1/11320;
             double angle = Math.random()*360;
             des = new LatLng(lat+Math.cos(angle)*displacement2, lng+Math.sin(angle)*displacement2);
             mMap.addMarker(new MarkerOptions().position(des).title("your destination"));
             MarkerPoints.add(des);
 
+
+            //add marker on the start point and zoom in
+            mMap.addMarker(new MarkerOptions().position(latLng).title("your start point"));
+            mMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
+            mMap.animateCamera(CameraUpdateFactory.zoomTo(12));
+
             //get the distance between the start point and destination
-            Location locationA = new Location("point A");
+            Location locationA = new Location("");
 
-            locationA.setLatitude(lat);
-            locationA.setLongitude(lng);
+            locationA.setLatitude(latitude);
+            locationA.setLongitude(longitude);
 
-            Location locationB = new Location("point B");
+            Location locationB = new Location("");
 
             locationB.setLatitude(des.latitude);
             locationB.setLongitude(des.longitude);
@@ -142,15 +160,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         }
 
-        if (Math.abs(latitude - des.latitude) < 0.0001 && Math.abs(longitude - des.longitude) < 0.0001){
-            Intent myIntent = new Intent(MapsActivity.this, FinishActivity.class);
-            startActivityForResult(myIntent, 0);
-        }
-
-        //add marker on the start point and zoom in
-        mMap.addMarker(new MarkerOptions().position(latLng).title("your start point"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
-        mMap.animateCamera(CameraUpdateFactory.zoomTo(12));
 
         //stop location updates
         if (mGoogleApiClient != null) {
